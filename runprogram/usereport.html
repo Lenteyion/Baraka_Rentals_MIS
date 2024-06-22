@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Report</title>
+    <style>
+        body {
+            font-family: monospace;
+            background-color: #581845;
+            text-align: left;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            flex-direction: column;
+            gap: 7px;
+            color: white;
+            font-size: 16px;
+            padding-top: 2px;
+
+        }
+        table {
+            border-collapse: collapse;
+            width: 100%;
+            border: 2px solid cyan;
+            border-radius: 10px;
+
+        }
+        th, td {
+            padding: 8px 12px;
+            border: 1px solid cyan;
+        }
+        th {
+            background-color: #900C3F;
+        }
+       
+    </style>
+</head>
+<body>
+    <h1>Registered Users Report</h1>
+    <hr style="border: 2px solid black;">
+    <?php
+    $servername = "localhost";
+    $username = "root"; 
+    $password = ""; 
+    $dbname = "registration"; 
+    
+    
+    $conn = new mysqli($servername, $username, $password, $dbname);
+    
+    
+    if ($conn->connect_error) {
+        die("Connection failed: " . $conn->connect_error);
+    }
+    
+    
+    $sql = "SELECT first_name, second_name, email, contact, house, date_joined FROM user";
+    $result = $conn->query($sql);
+    
+    
+    if ($result->num_rows > 0) {
+    
+        echo "<table>
+                <tr>
+                    <th>First Name</th>
+                    <th>Second Name</th>
+                    <th>Email</th>
+                    <th>Contact</th>
+                    <th>House</th>
+                    <th>Date Joined</th>
+                </tr>";
+        
+        
+        while($row = $result->fetch_assoc()) {
+            echo "<tr>
+                    <td>" . $row["first_name"] . "</td>
+                    <td>" . $row["second_name"] . "</td>
+                    <td>" . $row["email"] . "</td>
+                    <td>" . $row["contact"] . "</td>
+                    <td>" . $row["house"] . "</td>
+                    <td>" . $row["date_joined"] . "</td>
+                  </tr>";
+        }
+    
+        echo "</table>";
+    } else {
+        echo "No users found";
+    }
+    
+    $conn->close();
+    ?>
+    
+</body>
+</html>

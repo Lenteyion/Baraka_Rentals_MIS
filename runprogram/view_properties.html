@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+       body {
+    font-family: monospace;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    height: 100vh;
+    color: white;
+    background-color: #581845;
+}
+
+.container {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+}
+
+.sidebar {
+    width: 250px;
+    background-color: #581845;
+    color: white;
+    padding: 20px;
+}
+
+.sidebar h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    
+}
+
+.sidebar ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.sidebar ul li {
+    margin: 20px 0;
+    border: 1px solid green;
+    border-radius: 10px;
+    align-items: center;
+    text-align: center;
+    background-color: #2c3e50;
+}
+
+.sidebar ul li a {
+    color: white;
+    text-decoration: none;
+}
+
+.sidebar ul li a:hover {
+    text-decoration: underline;
+}
+
+.main-content {
+    flex-grow: 1;
+    padding: 40px;
+    background-color: #900C3F;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; 
+    align-items: center;
+    height: 80vh;
+}
+        
+        .container{
+            padding: 25px;
+            font-family: monospace;
+            margin-top: 2px;
+            
+        }
+        .container h1{
+            text-align: center;
+            font-size: 37;
+        }
+        table, th, td{
+            border: 3px solid gray;
+            background-color: #fff;
+            border-collapse: collapse;
+            color: #000;
+            padding: 2px;
+        }
+        
+    </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>View Properties</title>
+</head>
+<body>
+
+    <div class="container">
+        <div class="sidebar">
+            <h2>Baraka Rental</h2>
+            <hr style="border: 2px solid white;">
+            <ul>
+                <li><a href="index.html">Dashboard</a></li>
+                <li><a href="form.html">Tenants</a></li>
+                <li><a href="payment.html">Payments</a></li>
+                <li><a href="view_properties.html">Properties</a></li>
+                <li><a href="reports.html">Reports</a></li>
+            </ul>
+        </div>
+        <div class="main-content">
+            <h1>All Properties</h1>
+            <hr style="border: 2px solid black;">
+
+            <table width="100%">
+                <tr>
+                    <td>HOUSE TYPE</td>
+                    <td>HOUSE NO</td>
+                    <td>HOUSE PRICE</td>
+                    <td>DESCRIPTION</td>
+                </tr>
+                <tr>
+                    <td rowspan="4">Bedsiters</td>
+                    <td>Bs-01</td>
+                    <td>Ksh. 12000</td>
+                    <td>Block 2</td>
+                </tr>
+                <tr>
+                    <td>Bs-02</td>
+                    <td>Ksh. 12000</td>
+                    <td>Block 3</td>
+                </tr>
+                <tr>
+                    <td>Bs-03</td>
+                    <td>Ksh. 12000</td>
+                    <td>Block 2</td>
+                </tr>
+                <tr>
+                    <td>Bs-04</td>
+                    <td>Ksh. 12000</td>
+                    <td>Block 1</td>
+                </tr>
+                    <td rowspan="4">One Bedrooms</td>
+                    <td>A-01</td>
+                    <td>Ksh. 22000</td>
+                    <td>Block 2</td>
+                </tr>
+                <tr>
+                    <td>A-02</td>
+                    <td>Ksh. 22000</td>
+                    <td>Block 3</td>
+                </tr>
+                <tr>
+                    <td>A-03</td>
+                    <td>Ksh. 22000</td>
+                    <td>Block 2</td>
+                </tr>
+                <tr>
+                    <td>A-04</td>
+                    <td>Ksh. 22000</td>
+                    <td>Block 1</td>
+                </tr>
+
+                </tr>
+                    <td rowspan="4">Two Bedrooms</td>
+                    <td>B-01</td>
+                    <td>Ksh. 28000</td>
+                    <td>Block 2</td>
+                </tr>
+                <tr>
+                    <td>B-02</td>
+                    <td>Ksh. 28000</td>
+                    <td>Block 3</td>
+                </tr>
+                <tr>
+                    <td>B-03</td>
+                    <td>Ksh. 28000</td>
+                    <td>Block 2</td>
+                </tr>
+                <tr>
+                    <td>B-04</td>
+                    <td>Ksh. 28000</td>
+                    <td>Block 1</td>
+                </tr>
+
+                </tr>
+                    <td rowspan="4">Three Bedrooms</td>
+                    <td>C-01</td>
+                    <td>Ksh. 32000</td>
+                    <td>Block 2</td>
+                </tr>
+                <tr>
+                    <td>C-02</td>
+                    <td>Ksh. 32000</td>
+                    <td>Block 3</td>
+                </tr>
+                <tr>
+                    <td>C-03</td>
+                    <td>Ksh. 32000</td>
+                    <td>Block 2</td>
+                </tr>
+                <tr>
+                    <td>C-04</td>
+                    <td>Ksh. 32000</td>
+                    <td>Block 1</td>
+                </tr>
+
+            </table>
+        </div>
+    </div>
+
+
+
+</body>
+</html>

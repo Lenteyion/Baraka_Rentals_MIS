@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Report</title>
+    <style>
+        body {
+            font-family: monospace;
+            background-color: #581845;
+            text-align: left;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            flex-direction: column;
+            gap: 7px;
+            color: white;
+            font-size: 16px;
+            padding-top: 2px;
+
+        }
+        table {
+            border-collapse: collapse;
+            width: 100%;
+            border: 2px solid cyan;
+            border-radius: 10px;
+
+        }
+        th, td {
+            padding: 8px 12px;
+            border: 1px solid cyan;
+        }
+        th {
+            background-color: #900C3F;
+        }
+       
+    </style>
+</head>
+<body>
+    <h1>Payments Report</h1>
+    <hr style="border: 2px solid black;">
+    <?php include 'fetch_payments.php'; ?>
+</bodsy>
+</html>
